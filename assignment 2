@@ -1,0 +1,14 @@
+total = 0 
+while True:
+    A = input()
+    if A == "":
+     break
+    else:
+        A = A.split("")
+        if A[0] == "D":
+            total = total + int(A)
+        elif A[0] == "W": 
+          total = total - int(A) 
+        if total<=0:
+           print("your balance is insufficient")
+print(total)
