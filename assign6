@@ -1,0 +1,47 @@
+n = int(input("enter number of students: "))
+a = []
+for i in range(n):
+  a.append(int(input()))
+
+key = int(input("roll number to be searched"))
+
+
+
+def fibbonacci_search(n,key,a):
+  start = -1
+  f0 = 0
+  f1 = 1
+  f2 = f1 + f0
+  while (f2 < n):
+    f0 = f1
+    f1 = f2
+    f2 = f1 + f0
+
+  offset = -1
+
+  while (f2 >1):
+    i = min(offset+f0,n-1)
+
+    if (a[i]<key):
+      f2 = f1
+      f1 = f0
+      f0 = f2 - f1
+      offest = i
+    
+    elif (a[i]>key):
+      f2 = f1
+      f1 = f1 - f0
+      f0 = f2 - f1
+    else:
+      return i
+  if (f1 and a[n-1] == key):
+    return (n-1)
+  return (-1)
+
+result1 =fibbonacci_search(n,key,a)
+
+
+if (result1==-1):
+  print("element not found by fibbonacci search")
+else:
+  print("element found at position by fibbonacci search",result1)
