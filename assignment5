@@ -1,0 +1,22 @@
+element = input("Enter the String: ") 
+char=input("Enter the character whose occurence you want to find: ") 
+count=0
+counter=0
+# To check length of string 
+for i in range(len(element)):
+  count=count+1
+print("Length of string:",count) 
+print()
+# occurence of Character in string
+counter=0 
+for i in range(len(element)):
+  if char==element[i]:
+    counter+=1
+print("occurence of Character in string:",counter)  
+print()
+# STRING IS PALINDROME OR NOT 
+if (element  == element [::-1]):
+ print("The given string is palindrome")
+else:
+ print("The given string is not palindrome") 
+print() 
