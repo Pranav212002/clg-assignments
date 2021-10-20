@@ -1,0 +1,27 @@
+n = int(input("enter number of students: "))
+a = []
+for i in range(n):
+  a.append(int(input()))
+
+key = int(input("roll number to be searched"))
+
+def binary_search(n,key,a):
+  i=0
+  j=n-1
+  k = 0
+  while(i<=j):
+    k = k+1
+    c = (i+j)//2
+    if (key == a[c]):
+      return (c)
+    elif (key < a[c]):
+      j = c-1
+    else:
+      j = c+1
+  return (-1)
+
+result = binary_search(n,key,a)
+if (result==-1):
+  print("element not found by binary search")
+else:
+  print("element found at position by binary search",result)
