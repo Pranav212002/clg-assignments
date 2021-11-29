@@ -18,7 +18,7 @@ public:
     void get_characters_only();
     void display_original();
     void display_reverse();
-}
+};
 
 void Stack::push(char temp)
 {
