@@ -1,3 +1,8 @@
+#include<iostream>
+#include<string.h>
+#include<ctype.h>
+using namespace std;
+#define SIZE 50
 class Stack
 {
     private:
